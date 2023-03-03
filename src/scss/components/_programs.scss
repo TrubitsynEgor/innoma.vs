@@ -1,0 +1,143 @@
+.programs {
+  padding-top: 90px;
+  padding-bottom: 150px;
+
+  &__title {
+    padding-bottom: 20px;
+
+  }
+
+  &__accordion {}
+}
+
+.accordion {
+
+  &__item {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    padding-left: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--black);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &.active {
+      padding-bottom: 30px;
+
+      & .accordion__btn::after {
+        transform: rotate(-45deg)
+      }
+
+      & .accordion__btn::before {
+        transform: rotate(45deg)
+      }
+    }
+
+
+  }
+
+  &__btn {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: -5px;
+    background: #2A79C2;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 19%;
+      top: 49%;
+      transform: rotate(45deg);
+      width: 15px;
+      height: 2px;
+      background-color: var(--light);
+      transition: all 0.3s ease 0s;
+
+
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 20%;
+      top: 49%;
+      transform: rotate(-45deg);
+      width: 15px;
+      height: 2px;
+      background-color: var(--light);
+      transition: all 0.3s ease 0s;
+
+
+    }
+  }
+
+  &__main {}
+
+  &__accent {
+    font-weight: 700;
+    color: #2A79C2;
+    padding-right: 20px;
+  }
+
+  &__timeline {
+    padding-top: 4px;
+    padding-right: 0px;
+    padding-left: 20px;
+    font-weight: 400 !important;
+    font-size: 16px;
+    color: var(--black) !important;
+    display: none;
+
+    @include small-tablet {
+      display: inline-block;
+    }
+  }
+
+  &__body {
+    opacity: 0;
+    padding: 0;
+    height: 0;
+    transition: all 0.3s ease 0s;
+
+    &.active {
+      opacity: 1;
+
+      & .accordion__body-item:not(:last-child) {
+        padding: 25px 0;
+      }
+
+      & .accordion__body-item:last-child {
+        padding-top: 25px;
+      }
+
+      height: auto;
+    }
+  }
+
+  &__body-item {
+    margin-left: 20px;
+    border-top: 1px solid #E9E9E9;
+
+    & a {
+      text-decoration: none;
+      color: #2A79C2;
+    }
+
+
+  }
+}
