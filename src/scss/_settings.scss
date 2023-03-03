@@ -126,10 +126,12 @@ address {
   @include small-tablet {
     font-size: 32px;
     text-align: center;
+    line-height: 60px;
   }
 
   @include mobile {
     font-size: 24px;
+    line-height: 40px;
   }
 }
 
