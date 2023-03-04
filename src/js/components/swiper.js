@@ -74,7 +74,7 @@ const exertsSlider = new Swiper('.experts__slider', {
         prevEl: '.experts__slider-prev-mobile',
       },
     },
-    1024: {
+    1025: {
       slidesPerView: 4,
 
     }

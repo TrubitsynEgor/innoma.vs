@@ -30,6 +30,12 @@
     height: 379px;
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.09);
     border-radius: 10px;
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      background-color: rgba(#1178B2, 0.2);
+
+    }
 
     @media (max-width: 863px) {
       max-width: 229px;

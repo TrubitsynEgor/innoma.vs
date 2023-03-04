@@ -14,5 +14,15 @@ burgerClose.addEventListener('click', () => {
 });
 
 
+const menuLink = document.querySelectorAll('.nav__link')
+menuLink.forEach(el => {
+  el.addEventListener('click', () => {
+    nav.classList.remove('active')
+    burgerClose.classList.remove('active');
+    burgerOpen.classList.remove('active');
+  })
+})
+
+
 
 

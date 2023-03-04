@@ -7,12 +7,19 @@
   background-color: transparent;
   z-index: 100;
 
+  @media (max-width: 672px) {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 15px;
 
+    @media (max-width: 672px) {
+      padding-top: 0px;
+    }
   }
 
   &__logo {}
@@ -70,6 +77,11 @@
     @media (max-width: 878px) {
       gap: 20px;
     }
+
+    @media (max-width: 725px) {
+      gap: 10px;
+    }
+
 
     @media (max-width: 672px) {
       height: 100%;

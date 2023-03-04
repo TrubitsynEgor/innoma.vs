@@ -89,8 +89,9 @@
 
   &__social-btns {
     display: flex;
-
     gap: 50px;
+
+
 
     @media (max-width: 1100px) {
       justify-content: center;
@@ -107,6 +108,8 @@
       align-items: center;
       gap: 15px;
 
+
+
       @include mobile {
         flex-direction: column;
 
@@ -117,6 +120,10 @@
       display: block;
       font-size: 20px;
       color: #FFFFFF;
+
+      &:hover {
+        color: rgba(#ffffff, 0.5);
+      }
     }
 
 
@@ -125,6 +132,8 @@
       display: block;
       width: 60px;
       height: 60px;
+
+
     }
   }
 

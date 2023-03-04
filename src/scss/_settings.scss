@@ -123,9 +123,13 @@ address {
   line-height: 80px;
   color: var(--denim);
 
+  @include tablet {
+    text-align: center;
+
+  }
+
   @include small-tablet {
     font-size: 32px;
-    text-align: center;
     line-height: 60px;
   }
 
